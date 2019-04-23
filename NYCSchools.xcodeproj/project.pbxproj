@@ -14,6 +14,8 @@
 		866C14E0226F465200084968 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 866C14DF226F465200084968 /* Assets.xcassets */; };
 		866C14E3226F465200084968 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 866C14E1226F465200084968 /* LaunchScreen.storyboard */; };
 		866C14EE226F465200084968 /* NYCSchoolsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866C14ED226F465200084968 /* NYCSchoolsTests.swift */; };
+		866C14FD226F480C00084968 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866C14FC226F480C00084968 /* DataManager.swift */; };
+		866C14FE226F480C00084968 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866C14FC226F480C00084968 /* DataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +40,7 @@
 		866C14E9226F465200084968 /* NYCSchoolsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NYCSchoolsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		866C14ED226F465200084968 /* NYCSchoolsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NYCSchoolsTests.swift; sourceTree = "<group>"; };
 		866C14EF226F465200084968 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		866C14FC226F480C00084968 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,8 +82,10 @@
 		866C14D4226F465100084968 /* NYCSchools */ = {
 			isa = PBXGroup;
 			children = (
-				866C14D5226F465100084968 /* AppDelegate.swift */,
-				866C14D7226F465100084968 /* ViewController.swift */,
+				866C14FB226F47F100084968 /* DataManager */,
+				866C14F8226F468E00084968 /* Controllers */,
+				866C14F9226F469900084968 /* Model */,
+				866C14FA226F46AE00084968 /* Utility */,
 				866C14D9226F465100084968 /* Main.storyboard */,
 				866C14DF226F465200084968 /* Assets.xcassets */,
 				866C14E1226F465200084968 /* LaunchScreen.storyboard */,
@@ -97,6 +102,37 @@
 				866C14EF226F465200084968 /* Info.plist */,
 			);
 			path = NYCSchoolsTests;
+			sourceTree = "<group>";
+		};
+		866C14F8226F468E00084968 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				866C14D7226F465100084968 /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		866C14F9226F469900084968 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		866C14FA226F46AE00084968 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				866C14D5226F465100084968 /* AppDelegate.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		866C14FB226F47F100084968 /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				866C14FC226F480C00084968 /* DataManager.swift */,
+			);
+			path = DataManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -201,6 +237,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				866C14D8226F465100084968 /* ViewController.swift in Sources */,
+				866C14FD226F480C00084968 /* DataManager.swift in Sources */,
 				866C14DE226F465100084968 /* NYCSchools.xcdatamodeld in Sources */,
 				866C14D6226F465100084968 /* AppDelegate.swift in Sources */,
 			);
@@ -211,6 +248,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				866C14EE226F465200084968 /* NYCSchoolsTests.swift in Sources */,
+				866C14FE226F480C00084968 /* DataManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
