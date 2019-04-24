@@ -7,7 +7,8 @@
 //
 
 import Foundation
-// https://data.cityofnewyork.us/resource/s3k6-pzi2.json --> API EndPoint
+// https://data.cityofnewyork.us/resource/s3k6-pzi2.json --> Schools API EndPoint
+// https://data.cityofnewyork.us/Education/SAT-Results/f9bf-2cp4 --> SAT API Endpoint
 class DataManager{
     
     
