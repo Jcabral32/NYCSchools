@@ -8,14 +8,23 @@
 
 import Foundation
 
-class School{
+class School: Decodable{
     
     let name: String
     let address: String
+    
+    
     
     init(name:String, address: String){
         self.name = name
         self.address = address
     }
+    
+}
+
+struct SchoolJSONModel: Codable {
+    
+    var schools: [[String:String]]
+    
     
 }

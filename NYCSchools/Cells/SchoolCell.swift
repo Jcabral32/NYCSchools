@@ -18,5 +18,10 @@ class SchoolCell: UITableViewCell {
         SchoolName.text = school.name
     }
     
-  
+    
+    
+    
+    
+    
+    
 }

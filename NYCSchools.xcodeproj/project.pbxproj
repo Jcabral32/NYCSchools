@@ -11,6 +11,7 @@
 		860D98E5227093A60025D7AE /* School.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860D98E3227093A60025D7AE /* School.swift */; };
 		860D98E72270961E0025D7AE /* SchoolDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860D98E62270961E0025D7AE /* SchoolDetailViewController.swift */; };
 		860D98E82270961E0025D7AE /* SchoolDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860D98E62270961E0025D7AE /* SchoolDetailViewController.swift */; };
+		864B8C84227522D20008F5DF /* BarChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 864B8C83227522D20008F5DF /* BarChart.swift */; };
 		866C14D6226F465100084968 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866C14D5226F465100084968 /* AppDelegate.swift */; };
 		866C14D8226F465100084968 /* SchoolViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866C14D7226F465100084968 /* SchoolViewController.swift */; };
 		866C14DB226F465100084968 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 866C14D9226F465100084968 /* Main.storyboard */; };
@@ -37,6 +38,7 @@
 /* Begin PBXFileReference section */
 		860D98E3227093A60025D7AE /* School.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = School.swift; sourceTree = "<group>"; };
 		860D98E62270961E0025D7AE /* SchoolDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolDetailViewController.swift; sourceTree = "<group>"; };
+		864B8C83227522D20008F5DF /* BarChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarChart.swift; sourceTree = "<group>"; };
 		866C14D2226F465100084968 /* NYCSchools.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NYCSchools.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		866C14D5226F465100084968 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		866C14D7226F465100084968 /* SchoolViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolViewController.swift; sourceTree = "<group>"; };
@@ -70,10 +72,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		864B8C82227522B90008F5DF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				866C14D9226F465100084968 /* Main.storyboard */,
+				866C14E1226F465200084968 /* LaunchScreen.storyboard */,
+				864B8C83227522D20008F5DF /* BarChart.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		866C14C9226F465100084968 = {
 			isa = PBXGroup;
 			children = (
-				860D98E3227093A60025D7AE /* School.swift */,
 				866C14D4226F465100084968 /* NYCSchools */,
 				866C14EC226F465200084968 /* NYCSchoolsTests */,
 				866C14D3226F465100084968 /* Products */,
@@ -96,10 +107,9 @@
 				866C14FB226F47F100084968 /* DataManager */,
 				866C14F8226F468E00084968 /* Controllers */,
 				866C14F9226F469900084968 /* Model */,
+				864B8C82227522B90008F5DF /* Views */,
 				866C14FA226F46AE00084968 /* Utility */,
-				866C14D9226F465100084968 /* Main.storyboard */,
 				866C14DF226F465200084968 /* Assets.xcassets */,
-				866C14E1226F465200084968 /* LaunchScreen.storyboard */,
 				866C14E4226F465200084968 /* Info.plist */,
 				866C14DC226F465100084968 /* NYCSchools.xcdatamodeld */,
 			);
@@ -127,6 +137,7 @@
 		866C14F9226F469900084968 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				860D98E3227093A60025D7AE /* School.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -256,6 +267,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				864B8C84227522D20008F5DF /* BarChart.swift in Sources */,
 				866C14D8226F465100084968 /* SchoolViewController.swift in Sources */,
 				860D98E4227093A60025D7AE /* School.swift in Sources */,
 				866C1501226FA33C00084968 /* SchoolCell.swift in Sources */,

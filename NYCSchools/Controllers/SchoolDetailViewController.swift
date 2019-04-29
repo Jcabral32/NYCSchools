@@ -10,6 +10,8 @@ import UIKit
 
 class SchoolDetailViewController: UIViewController {
 
+    @IBOutlet weak var schoolName: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
