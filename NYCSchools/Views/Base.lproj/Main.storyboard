@@ -13,7 +13,7 @@
         <!--NYC HIGH SCHOOLS-->
         <scene sceneID="3If-nb-fnf">
             <objects>
-                <tableViewController id="1FD-hC-XMi" sceneMemberID="viewController">
+                <tableViewController id="1FD-hC-XMi" customClass="SchoolViewController" customModule="NYCSchools" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Uz9-HB-pfM">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

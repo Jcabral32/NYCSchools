@@ -15,6 +15,7 @@ class SchoolViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        dataManager.downloadSchoolJSON()
         
         // Do any additional setup after loading the view.
     }
