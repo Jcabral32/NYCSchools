@@ -31,7 +31,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="119.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="School Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Liy-dH-UsJ">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="School Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Liy-dH-UsJ">
                                             <rect key="frame" x="20" y="27" width="374" height="65"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="30"/>
@@ -41,9 +41,10 @@
                                     </subviews>
                                     <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <outlet property="SchoolName" destination="Liy-dH-UsJ" id="gap-TP-ALo"/>
-                                    <segue destination="slQ-VB-2CW" kind="showDetail" id="zx7-dW-vM9"/>
+                                    <segue destination="slQ-VB-2CW" kind="show" id="XjD-uw-c6m"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -108,13 +109,14 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="FQO-nN-koP"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Title" id="seQ-W1-oF9"/>
                     <connections>
                         <outlet property="schoolName" destination="KLX-CR-YXc" id="OMW-ZL-fDn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f6x-iT-7J9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2428.985507246377" y="342.85714285714283"/>
+            <point key="canvasLocation" x="2319" y="343"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="46U-Jj-d4X">

@@ -9,7 +9,8 @@
 import Foundation
 import SwiftyJSON
 // https://data.cityofnewyork.us/resource/s3k6-pzi2.json --> Schools API EndPoint
-// https://data.cityofnewyork.us/Education/SAT-Results/f9bf-2cp4 --> SAT API Endpoint
+// https://data.cityofnewyork.us/resource/f9bf-2cp4.json --> SAT API Endpoint
+
 
 /*
  The DataManager object is responsible for 
@@ -19,43 +20,46 @@ class DataManager{
     
     
     //Retrieves data from the
-    func downloadSchoolJSON(){
-            guard let getURL = URL(string: "https://data.cityofnewyork.us/resource/s3k6-pzi2.json") else { print("Error getting SchoolURL")
-                return
+    func downloadSchoolJSON(_ completion: @escaping ([School]) -> ())  {
+        
+            var schoolArray = [School]()
+        
+            guard let getSchoolURL = URL(string: "https://data.cityofnewyork.us/resource/s3k6-pzi2.json") else { print("Error getting SchoolURL")
+                fatalError()
             }
         
-            let task = URLSession.shared.dataTask(with: getURL){ (data,response, error) in
-                
-                var schoolArray = [School]()
+            guard let getSATURL = URL(string: "https://data.cityofnewyork.us/resource/f9bf-2cp4.json") else {
+                print("Error getting SATURL")
+                fatalError()
+            }
+        
+        
+            let task = URLSession.shared.dataTask(with: getSchoolURL){ (data,response, error) in
                 guard let newData = data else{
                     return
                 }
-                
+    
                 do{
                     let json = try JSON(data: newData)
-                    
-                    //let school = School(name: json[0][""].string!, address: json[0][7].string!)
-                    
+                    //Iterate over all json objects
                     for i in 0...json.count{
                         let schoolName = json[i]["school_name"].description
                         let address = json[i]["primary_address_line_1"].description
-                        schoolArray.append(School(name: schoolName , address: address))
+                        let dbn = json[i]["dbn"].description
+                        //DispatchQueue.main.async {
+                        schoolArray.insert(School(name: schoolName , address: address, dbn: dbn), at: i)
+                            completion(schoolArray)
                     }
+                    //Test
                     print(schoolArray[0].name)
-                    
                 }catch{
                     print(error)
                 }
-                
-        }
-        task.resume()
+            }
+            task.resume()
+        
         }
     
-    
-    func downloadSATJSON(){
-        var getURL = URL(string: "https://data.cityofnewyork.us/Education/SAT-Results/f9bf-2cp4")
-    }
-
 }
 
 
