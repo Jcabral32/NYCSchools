@@ -16,6 +16,7 @@ class SchoolViewController: UITableViewController {
     var satArray = [SATScore]()
     var searchResults = [School]()
     let dispatchGroup = DispatchGroup()
+    var searching = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,16 +36,32 @@ class SchoolViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return schoolArray.count
+        if searching{
+            return searchResults.count
+        }else{
+            return schoolArray.count
+        }
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         //self.schoolArray = self.dataManager.downloadSchoolJSON()
-        let school = schoolArray[indexPath.row]
+        
+        
+        
         let schoolCell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! SchoolCell
         
-        schoolCell.displayScool(school: school)
-        schoolCell.textLabel?.text = school.name
+        if searching{
+            let school = searchResults[indexPath.row]
+            schoolCell.displayScool(school: school)
+            schoolCell.textLabel?.text = school.name
+        }else{
+            let school = schoolArray[indexPath.row]
+            schoolCell.displayScool(school: school)
+            schoolCell.textLabel?.text = school.name
+            
+        }
+        
+       
         //tableView.reloadData()
         return schoolCell
     }
@@ -56,4 +73,20 @@ class SchoolViewController: UITableViewController {
 
 }
 
+extension SchoolViewController: UISearchBarDelegate{
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        
+        searchResults = schoolArray.filter({ (school) -> Bool in
+            if school.name.prefix(searchText.count) == searchText{
+                return true
+            }else{
+                return false
+            }
+        })
+        searching = true
+        self.tableView.reloadData()
+    }
+    
+}
 

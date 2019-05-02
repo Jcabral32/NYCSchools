@@ -42,6 +42,7 @@ class DataManager{
                     let writingScore = Int(json[i]["sat_writing_avg_score"].description) ?? 0
                     let dbn = json[i]["dbn"].description
                     //DispatchQueue.main.async {
+                    
                     satArray.insert(SATScore(readingScore: readingScore, mathScore: mathScore, writingScore: writingScore, dbn: dbn), at: i)
                 
                     completion(satArray)
@@ -81,6 +82,7 @@ class DataManager{
                         let dbn = json[i]["dbn"].description
                         //DispatchQueue.main.async {
                         schoolArray.insert(School(name: schoolName , address: address, dbn: dbn), at: i)
+                        //Sort the Array Alphabetically
                         schoolArray.sort(by: { (school1, school2) -> Bool in
                             if school1.name < school2.name{
                                 return true
