@@ -13,15 +13,24 @@ class SchoolViewController: UITableViewController {
     
     let dataManager = DataManager()
     var schoolArray = [School]()
+    var satArray = [SATScore]()
+    var searchResults = [School]()
+    let dispatchGroup = DispatchGroup()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         dataManager.downloadSchoolJSON { (school) in
             self.schoolArray = school
             DispatchQueue.main.async {
                 self.tableView.reloadData()
             }
         }
+        
+        dataManager.downloadSATJSON { (scores) in
+            self.satArray = scores
+        }
+        
         
     }
     
