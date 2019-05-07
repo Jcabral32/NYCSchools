@@ -70,25 +70,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sC4-46-0NV">
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sC4-46-0NV">
                                 <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="SAT SCORES" id="Tph-zQ-DUE"/>
                                 </items>
                             </navigationBar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="School Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KLX-CR-YXc">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="School Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KLX-CR-YXc">
                                 <rect key="frame" x="134" y="666" width="147" height="53"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.20325332880020142" green="0.92413097620010376" blue="0.86906152963638306" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="53" id="5IL-gx-RNn"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="italicSystem" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                                 <color key="shadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </label>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iph-Nq-oSn">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iph-Nq-oSn">
                                 <rect key="frame" x="20" y="123" width="374" height="428"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Bar Graph" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aVT-il-Zwd">
                                         <rect key="frame" x="148" y="192" width="78" height="21"/>
@@ -99,10 +99,12 @@
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="iph-Nq-oSn" secondAttribute="height" multiplier="187:214" id="nSE-Pf-vML"/>
+                                </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V5s-Tg-2xF">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V5s-Tg-2xF">
                                 <rect key="frame" x="134" y="749" width="147" height="42"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.20325332880020142" green="0.92413097620010376" blue="0.86906152963638306" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="italicSystem" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -110,6 +112,21 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="KLX-CR-YXc" firstAttribute="leading" secondItem="V5s-Tg-2xF" secondAttribute="leading" id="2eQ-MT-Rhc"/>
+                            <constraint firstItem="iph-Nq-oSn" firstAttribute="leading" secondItem="FQO-nN-koP" secondAttribute="leading" constant="20" id="3tR-7b-Js1"/>
+                            <constraint firstItem="iph-Nq-oSn" firstAttribute="top" secondItem="LMj-v5-74X" secondAttribute="top" constant="123" id="8S2-Qy-Pi1"/>
+                            <constraint firstItem="V5s-Tg-2xF" firstAttribute="top" secondItem="KLX-CR-YXc" secondAttribute="bottom" constant="30" id="Bgr-NP-GUY"/>
+                            <constraint firstItem="iph-Nq-oSn" firstAttribute="top" secondItem="sC4-46-0NV" secondAttribute="bottom" constant="35" id="CeG-6Q-5XK"/>
+                            <constraint firstAttribute="bottom" secondItem="KLX-CR-YXc" secondAttribute="bottom" constant="177" id="R4y-pk-Tlu"/>
+                            <constraint firstItem="sC4-46-0NV" firstAttribute="leading" secondItem="LMj-v5-74X" secondAttribute="leading" id="TMc-oS-PoW"/>
+                            <constraint firstItem="KLX-CR-YXc" firstAttribute="centerX" secondItem="sC4-46-0NV" secondAttribute="centerX" id="WdF-h5-byF"/>
+                            <constraint firstItem="iph-Nq-oSn" firstAttribute="centerX" secondItem="KLX-CR-YXc" secondAttribute="centerX" id="e6b-8t-9TX"/>
+                            <constraint firstItem="FQO-nN-koP" firstAttribute="trailing" secondItem="iph-Nq-oSn" secondAttribute="trailing" constant="20" id="hso-90-Bp8"/>
+                            <constraint firstItem="KLX-CR-YXc" firstAttribute="leading" secondItem="FQO-nN-koP" secondAttribute="leading" constant="134" id="k5m-I8-EeR"/>
+                            <constraint firstItem="iph-Nq-oSn" firstAttribute="centerX" secondItem="V5s-Tg-2xF" secondAttribute="centerX" id="t9V-Pq-sKw"/>
+                            <constraint firstItem="iph-Nq-oSn" firstAttribute="centerX" secondItem="sC4-46-0NV" secondAttribute="centerX" id="xI1-R4-tz8"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="FQO-nN-koP"/>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="seQ-W1-oF9"/>

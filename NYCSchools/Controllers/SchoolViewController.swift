@@ -21,33 +21,35 @@ class SchoolViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        print("STEP 1")
         dataManager.downloadSchoolJSON { (school) in
             self.schoolArray = school
             DispatchQueue.main.async {
                 self.tableView.reloadData()
+                print("Step 3")
             }
         }
+        
         
         dataManager.downloadSATJSON { (scores) in
             self.satArray = scores
         }
         
+        print("STEP 2")
         
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if searching{
             return searchResults.count
-        }else{
+        } else {
             return schoolArray.count
         }
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        //self.schoolArray = self.dataManager.downloadSchoolJSON()
-        
-        
-        
+      
         let schoolCell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! SchoolCell
         
         if searching{
@@ -58,18 +60,10 @@ class SchoolViewController: UITableViewController {
             let school = schoolArray[indexPath.row]
             schoolCell.displayScool(school: school)
             schoolCell.textLabel?.text = school.name
-            
         }
         
-       
-        //tableView.reloadData()
         return schoolCell
     }
-    
-    
-    
-    
-
 
 }
 
@@ -87,6 +81,7 @@ extension SchoolViewController: UISearchBarDelegate{
         searching = true
         self.tableView.reloadData()
     }
+    
     
 }
 

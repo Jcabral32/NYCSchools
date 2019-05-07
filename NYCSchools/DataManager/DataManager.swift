@@ -89,10 +89,10 @@ class DataManager{
                             }
                                 return false
                         })
-                            completion(schoolArray)
+                        
                     }
-                    //Test
-                    print(schoolArray[0].name)
+                    completion(schoolArray)
+                    
                 }catch{
                     print(error)
                 }
